@@ -42,28 +42,6 @@ JavaScript (Vanilla) — lógica, cálculos e manipulação do DOM
 
 Sem frameworks, focado em base sólida de front-end.
 
-📂 Estrutura do Projeto
-.
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
-▶️ Como Executar o Projeto
-
-Clone o repositório:
-
-git clone https://github.com/seu-usuario/gerenciador-financas.git
-
-
-Acesse a pasta:
-
-cd gerenciador-financas
-
-
-Abra o arquivo index.html no navegador
-(ou use Live Server no VS Code)
-
 🧾 Extrato Financeiro
 
 A aplicação permite gerar um extrato financeiro em formato de impressão, contendo:
