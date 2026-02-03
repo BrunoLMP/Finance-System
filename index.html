@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerenciador de Finanças</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Tela inicial -->
+<div id="welcome-screen" class="welcome">
+  <div class="welcome-card">
+    <div class="bank-icon">🏦</div>
+    <h1>Bem-vindo</h1>
+    <p>Controle simples das suas finanças</p>
+    <button id="enter-app" class="btn enter-btn">Entrar</button>
+  </div>
+</div>
+
+<div class="container hidden" id="app">
+  <header>
+    <h1>Gerenciador de Finanças</h1>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>📊 Saldo e Contas</h2>
+
+      <div class="field">
+        <label>Saldo Inicial</label>
+        <input id="initial-balance" type="number" step="0.01">
+      </div>
+
+      <div class="field">
+        <label>Contas / Gastos</label>
+        <div id="expense-forms" class="expenses-list"></div>
+      </div>
+
+      <div class="controls">
+        <button id="add-expense" class="btn">＋ Adicionar</button>
+        <button id="clear-all" class="btn secondary">Limpar</button>
+      </div>
+    </section>
+
+    <aside class="card">
+      <h2>✅ Resumo</h2>
+
+      <div class="summary">
+        <div class="row">
+          <span>Gasto Total</span>
+          <span id="total-expenses">R$ 0,00</span>
+        </div>
+
+        <div class="row">
+          <span>Saldo Restante</span>
+          <span id="remaining-balance">R$ 0,00</span>
+        </div>
+
+        <button id="print-statement" class="btn secondary">
+          🧾 Gerar Extrato
+        </button>
+      </div>
+    </aside>
+  </main>
+
+  <footer>Gerenciador de Finanças</footer>
+</div>
+
+<!-- EXTRATO -->
+<div id="statement" class="statement">
+  <h1>Extrato Financeiro</h1>
+
+  <table class="summary-table">
+    <tr><td>Saldo Inicial</td><td id="st-initial"></td></tr>
+    <tr><td>Total de Gastos</td><td id="st-total"></td></tr>
+    <tr class="highlight"><td>Saldo Final</td><td id="st-remaining"></td></tr>
+  </table>
+
+  <h2>Despesas</h2>
+
+  <table class="expenses-table">
+    <thead>
+      <tr><th>Conta</th><th>Valor</th></tr>
+    </thead>
+    <tbody id="st-list"></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
